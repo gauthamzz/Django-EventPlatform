@@ -6,7 +6,7 @@
 
 <nav class='blue'>
   <div class="nav-wrapper">
-    <a href="" class="brand-logo left">  Stegolica</a>
+    <a href="/" class="brand-logo left">  Stegolica</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
 
     </ul>
@@ -18,9 +18,10 @@
 
 <!-- {% load static %}
 <img src="{% static "1.jpg" %}" alt="My image"/> -->
-<div class ="col-sm-7 col-sm-offset-3">
+<div class ="col-sm-9 col-sm-offset-2">
 <div class="card-panel hoverable grey lighten-4 ">
 {{instance}}
+<img src={{imagelink}}>
 <!-- differenceintime -->
 <form method='POST' action=''>{% csrf_token %}
 {{ form.as_p }}

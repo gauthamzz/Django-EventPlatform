@@ -2,25 +2,106 @@
 {%block content%}
 <nav class='blue'>
   <div class="nav-wrapper">
-    <a href="" class="brand-logo left">  Stegolica</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      {% if who %}
-      <li><a href='/accounts/login' class="waves-effect waves-light btn" role="button">login</a></li>
-      <a href='/accounts/register'  class="waves-effect waves-light btn" role="button">register</a>
-      {% else %}
-      <a href='/accounts/logout'  class="waves-effect waves-light btn" role="button">logout</a></li>
-  {% endif %}
 
-      <a href='/website/10'  class="waves-effect waves-light btn" role="button">answer</a>
-      <a href='/website/rank'  class="waves-effect waves-light btn" role="button">rank</a>
+
+    <div class="preloader-wrapper small active">
+    <div class="spinner-layer spinner-black-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+    <a href="/" class="brand-logo center">  Stegolica</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
 
     </ul>
 
   </div>
 </nav>
 
+<div id="particles">
+  <div id="content">
+<div class="card-panel hoverable grey lighten-4">
+    <h5>Hey {{whoami}}!! Welcome to the online steganography competition : Stegolica</h5>
+    <p> Steganography is the practice of concealing a file,message,image or video within another file,message,image or video. In every question there will be something hidden (a key) and you have to find out what it is, To go to the next level. </p>
+</br>
+    <h5>Rules</h5>
+    <p>1. Answers should be in lower cases with no spaces in between</p>
+    <p>2. Organisers decision will be final in case of any dispute </p>
+</br>
 
-welcome to stegolica
+</div>
+{% if who %}
+<a href='/accounts/login' class="waves-effect blue waves-light btn " role="button">Login</a>
+<a href='/accounts/register'  class="blue waves-effect waves-light btn" role="button">Register</a>
+{% else %}
+<a href='/accounts/logout'  class="blue waves-effect waves-light btn" role="button">Logout</a></li>
+{% endif %}
 
-  {{whoami}}
+<a href='/website/10'  class="green waves-effect waves-light btn" role="button">Answer</a>
+<a href='/website/rank'  class="light-green waves-effect waves-light btn" role="button">Current Ranks</a>
+
+  <a href='https://www.facebook.com/events/1498424726911739/'  class="yellow waves-effect waves-light btn" role="button">Event Page(Clues)</a>
+<!-- <div class="carousel"> -->
+  <!-- <a class ="carousel-item"><img src=""></a> -->
+<!-- </div> -->
+<!-- <div class="card-panel hoverable grey lighten-4">
+    <h5>Rules</h5>
+    <p>  </p>
+</br>
+
+</div> -->
+
+
+
+    </br></br></br></br>
+  </div>
+</div>
+
+<!-- <ul class="collapsible" data-collapsible="accordion">
+   <li>
+     <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+   </li>
+   <li>
+     <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+   </li>
+   <li>
+     <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+     <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+   </li>
+ </ul> -->
+
+ <footer class="page-footer blue">
+       <div class="container">
+         <div class="row">
+           <div class="col l6 s12">
+             <h5 class="white-text">Stegolica</h5>
+             <p class="grey-text text-lighten-4">Online Stegnography Competition.</p>
+           </div>
+           <div class="col l4 offset-l2 s12">
+             <h5 class="white-text">Created by</h5>
+             <ul>
+               <li><a class="grey-text text-lighten-3" href="http://gauthamzz.github.io">Gautham Santhosh : +918281896007</a></li>
+               <li><a class="grey-text text-lighten-3" href="http://github.com/mubaris">Mubaris Hassan</a></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+       <div class="footer-copyright">
+         <div class="container">
+         © 2016 EFFE
+         <a class="grey-text text-lighten-4 right" href="http://effe.org.in">Effervesence IIIT-Allahabad</a>
+         </div>
+       </div>
+     </footer>
+
+
+
+
 {%endblock content%}

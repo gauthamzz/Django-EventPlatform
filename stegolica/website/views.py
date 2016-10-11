@@ -60,6 +60,7 @@ def question(request,id=None):
     # currenttime=datetime.datetime.now()
     # diff=currenttime-time
     instancetext=instance.questiontext
+    imagelink=instance.imagelink
     answer=instance.answertext
     # check if answer is correct
     if form.is_valid():
@@ -74,7 +75,8 @@ def question(request,id=None):
             return HttpResponseRedirect('/website/rank')
     context={
     "instance":instancetext,
-    "form":form
+    "form":form,
+    "imagelink":imagelink
     # "differenceintime":diff
     }
     return render(request,"question.html",context)

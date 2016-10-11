@@ -8,7 +8,7 @@ class Question(models.Model):
     questiontext=models.CharField(max_length=100)
     answertext=models.CharField(max_length=100)
     hint1=models.CharField(max_length=100,default="No Hints")
-    hint2=models.CharField(max_length=100,default="No Hints")
+    imagelink=models.CharField(max_length=100,default="No Hints")
 
     def __unicode__(self):
 		return unicode(self.questionid)
