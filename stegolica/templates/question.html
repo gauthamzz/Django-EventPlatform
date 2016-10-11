@@ -4,10 +4,22 @@
 
 {%block content%}
 
+<nav class='blue'>
+  <div class="nav-wrapper">
+    <a href="" class="brand-logo left">  Stegolica</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
 <!-- {% load static %}
 <img src="{% static "1.jpg" %}" alt="My image"/> -->
-
-
+<div class ="col-sm-7 col-sm-offset-3">
+<div class="card-panel hoverable grey lighten-4 ">
 {{instance}}
 <!-- differenceintime -->
 <form method='POST' action=''>{% csrf_token %}
@@ -16,4 +28,6 @@
 <a href='/'  class="waves-effect waves-light btn" role="button">back</a>
 <a href='/website/rank'  class="waves-effect waves-light btn" role="button">rank</a>
 </form>
+</div>
+</div>
 {%endblock content%}

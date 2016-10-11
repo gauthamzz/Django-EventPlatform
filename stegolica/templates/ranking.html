@@ -1,15 +1,25 @@
 {%extends "base.html"%}
 {%block content%}
 
+<nav class='blue'>
+  <div class="nav-wrapper">
+    <!-- <a href="" class="brand-logo left">  Stegolica</a> -->
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-<form method="GET" action="">
-<div class="input-field">
-  <label for="search"><i class="material-icons">search</i></label>
- <input type="text" name="q" placeholder="  Search" value="{{request.GET.q}}"/>
- <!-- <input type="submit" value="Search"/> -->
+    </ul>
+    <form method="GET" action="">
+    <div class="input-field">
+      <label for="search"></label>
+     <input type="text" name="q" placeholder="  Search" value="{{request.GET.q}}"/>
+     <!-- <input type="submit" value="Search"/> -->
 
-</div>
-</form>
+    </div>
+    </form>
+  </div>
+</nav>
+
+
+
 
 <div class="row">
 {%for object in object_list%}

@@ -1,10 +1,26 @@
 {%extends "base.html"%}
 {%block content%}
+<nav class='blue'>
+  <div class="nav-wrapper">
+    <a href="" class="brand-logo left">  Stegolica</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      {% if who %}
+      <li><a href='/accounts/login' class="waves-effect waves-light btn" role="button">login</a></li>
+      <a href='/accounts/register'  class="waves-effect waves-light btn" role="button">register</a>
+      {% else %}
+      <a href='/accounts/logout'  class="waves-effect waves-light btn" role="button">logout</a></li>
+  {% endif %}
+
+      <a href='/website/10'  class="waves-effect waves-light btn" role="button">answer</a>
+      <a href='/website/rank'  class="waves-effect waves-light btn" role="button">rank</a>
+
+    </ul>
+
+  </div>
+</nav>
+
+
 welcome to stegolica
 
-<a href='/accounts/login'  class="waves-effect waves-light btn" role="button">login</a>
-<a href='/accounts/register'  class="waves-effect waves-light btn" role="button">register</a>
-<a href='/website/10'  class="waves-effect waves-light btn" role="button">answer</a>
-<a href='/website/rank'  class="waves-effect waves-light btn" role="button">rank</a>
-<a href='/accounts/logout'  class="waves-effect waves-light btn" role="button">logout</a>
+  {{whoami}}
 {%endblock content%}
