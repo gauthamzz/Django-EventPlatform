@@ -1,0 +1,59 @@
+{%extends "base.html"%}
+{%block content%}
+
+
+<form method="GET" action="">
+<div class="input-field">
+  <label for="search"><i class="material-icons">search</i></label>
+ <input type="text" name="q" placeholder="  Search" value="{{request.GET.q}}"/>
+ <!-- <input type="submit" value="Search"/> -->
+
+</div>
+</form>
+
+<div class="row">
+{%for object in object_list%}
+<!--edit here for changing induvijual ones -->
+<!-- <div class="card-panel hoverable grey lighten-4"> -->
+  <!-- {{object.complaintid}}</br>
+  {{object.dateofcomplaint}}</br>
+  Status: {{object.status}}<br/>
+  <a href='{{object.get_absolute_url}}'  class="waves-effect waves-light btn" role="button">View</a> -->
+
+  <ul class="collection">
+     <li class="collection-item avatar">
+       <!-- <i class="material-icons circle  teal darken-2">info_outline</i> -->
+       <div class="title" style="font-size:18pt;">Username : {{object.username}}     Current Score : {{object.currentquestion}}</div>
+
+
+       <!-- </p> -->
+      <!-- <a href='{{object.get_absolute_url}}'  class="waves-effect waves-light btn secondary-content" role="button">View</a> -->
+     </li>
+   </ul>
+
+<!-- </div> -->
+
+{% endfor%}
+<!--paginator dont change-->
+<div class="pagination">
+    <span class="step-links">
+        {% if object_list.has_previous %}
+            <a href="?page={{ object_list.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+        </span>
+
+        {% if object_list.has_next %}
+
+            <a href="?page={{ object_list.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+
+
+</div>
+<a href='/'  class="waves-effect waves-light btn" role="button">back</a>
+<a href='/website/10'  class="waves-effect waves-light btn" role="button">next</a>
+{%endblock content%}
