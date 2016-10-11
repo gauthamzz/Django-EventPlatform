@@ -42,8 +42,10 @@ def question(request,id=None):
 		return HttpResponseRedirect("/accounts/login")
     instance=get_object_or_404(Question,questionid=id)
     form =QuestionForm(request.POST or None)
-    if id!=10:
-        instance2=get_object_or_404(Ranking,username=request.user.username)
+    try:
+        instance2=Ranking.objects.get(username=request.user.username)
+    except ObjectDoesNotExist:
+        instance2=Ranking.objects.create(username=request.user.username,currentquestion=10)
     if instance2.currentquestion!=id :
         return HttpResponseRedirect("/website/%s" %instance2.currentquestion)
     # check if user already ansered
