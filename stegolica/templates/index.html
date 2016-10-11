@@ -17,7 +17,13 @@
   </div>
     <a href="/" class="brand-logo center">  Stegolica</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-
+      {% if who %}
+      <a href='/accounts/login' class="waves-effect blue waves-light btn " role="button">Login</a>
+      <a href='/accounts/register'  class="blue waves-effect waves-light btn" role="button">Register</a>
+      {% else %}
+      <a href='/accounts/logout'  class="blue waves-effect waves-light btn" role="button">Logout</a></li>
+      {% endif %}
+      </br>
     </ul>
 
   </div>
@@ -35,17 +41,13 @@
 </br>
 
 </div>
-{% if who %}
-<a href='/accounts/login' class="waves-effect blue waves-light btn " role="button">Login</a>
-<a href='/accounts/register'  class="blue waves-effect waves-light btn" role="button">Register</a>
-{% else %}
-<a href='/accounts/logout'  class="blue waves-effect waves-light btn" role="button">Logout</a></li>
-{% endif %}
+<div class ="col-sm-8 col-sm-offset-3">
 
-<a href='/website/10'  class="green waves-effect waves-light btn" role="button">Answer</a>
-<a href='/website/rank'  class="light-green waves-effect waves-light btn" role="button">Current Ranks</a>
 
-  <a href='https://www.facebook.com/events/1498424726911739/'  class="yellow waves-effect waves-light btn" role="button">Event Page(Clues)</a>
+<a href='/website/rank'  class="black waves-effect waves-light btn" role="button">Current Ranks</a>
+<a href='/website/10'  class="black waves-effect waves-light btn" role="button">Answer</a>
+  <a href='https://www.facebook.com/events/1498424726911739/'  class="black waves-effect waves-light btn" role="button">Event Page(Clues)</a>
+</div>
 <!-- <div class="carousel"> -->
   <!-- <a class ="carousel-item"><img src=""></a> -->
 <!-- </div> -->

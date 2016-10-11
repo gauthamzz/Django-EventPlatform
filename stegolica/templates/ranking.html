@@ -3,6 +3,7 @@
 
 <nav class='blue'>
   <div class="nav-wrapper">
+    <a href="/" class="brand-logo center">  Stegolica</a>
     <!-- <a href="" class="brand-logo left">  Stegolica</a> -->
     <ul id="nav-mobile" class="right hide-on-med-and-down">
 
@@ -22,6 +23,22 @@
 
 
 <div class="row">
+    <!-- <ul class="collection">
+       <li class="collection-header"><h4>Username : score </h4></li> -->
+
+       <table class="highlight">
+              <thead>
+                <tr>
+                    <th data-field="id">Name</th>
+                    <th data-field="score">score</th>
+                </tr>
+              </thead>
+<tbody>
+
+
+
+
+
 {%for object in object_list%}
 <!--edit here for changing induvijual ones -->
 <!-- <div class="card-panel hoverable grey lighten-4"> -->
@@ -30,20 +47,37 @@
   Status: {{object.status}}<br/>
   <a href='{{object.get_absolute_url}}'  class="waves-effect waves-light btn" role="button">View</a> -->
 
-  <ul class="collection">
-     <li class="collection-item avatar">
-       <!-- <i class="material-icons circle  teal darken-2">info_outline</i> -->
-       <div class="title" style="font-size:18pt;">Username : {{object.username}}     Current Score : {{object.currentquestion}}</div>
+
+     <!-- <li class="collection-item ">
+       <!- <i class="material-icons circle  teal darken-2">info_outline</i> -->
+       <!-- <div class="title" style="font-size:18pt;">{{object.username}} &emsp; {{object.currentquestion}}</div> -->
 
 
        <!-- </p> -->
       <!-- <a href='{{object.get_absolute_url}}'  class="waves-effect waves-light btn secondary-content" role="button">View</a> -->
-     </li>
-   </ul>
+     <!-- </li>  -->
+
 
 <!-- </div> -->
 
+
+
+  <tr>
+    <td>{{object.username}}</td>
+    <td>{{object.currentquestion}}</td>
+  </tr>
+
+
+
+
+
+
 {% endfor%}
+</tbody>
+</table>
+
+
+   <!-- </ul> -->
 <!--paginator dont change-->
 <div class="pagination">
     <span class="step-links">
