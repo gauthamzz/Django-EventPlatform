@@ -52,7 +52,7 @@ def question(request,id=None):
     try:
         instance2=Ranking.objects.get(username=request.user.username)
     except ObjectDoesNotExist:
-        instance2=Ranking.objects.create(username=request.user.username,currentquestion=10)
+        instance2=Ranking.objects.create(username=request.user.username,currentquestion=1)
     if instance2.currentquestion!=id :
         return HttpResponseRedirect("/website/%s" %instance2.currentquestion)
     # check if user already ansered

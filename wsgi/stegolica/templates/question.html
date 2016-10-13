@@ -13,16 +13,13 @@
 
   </div>
 </nav>
+ <!-- question 1 answer is "penpineappleapplepen" -->
 
-
-
-<!-- {% load static %}
-<img src="{% static "1.jpg" %}" alt="My image"/> -->
 <div class ="col-sm-9 col-sm-offset-2">
 <div class="card-panel hoverable grey lighten-4 ">
-{{instance}}
-<img src={{imagelink}}>
-<!-- differenceintime -->
+<h5>{{instance}}</h5>
+{{imagelink|safe}}
+
 <form method='POST' action=''>{% csrf_token %}
 {{ form.as_p }}
 <input type='submit' class="waves-effect waves-light btn" value='Submit Answer'/>
@@ -31,4 +28,8 @@
 </form>
 </div>
 </div>
+
+
+
+
 {%endblock content%}
