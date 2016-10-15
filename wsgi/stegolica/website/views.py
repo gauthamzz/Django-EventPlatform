@@ -25,7 +25,7 @@ def index(request):
     return render(request,"index.html",context)
 
 def rank(request):
-    queryset_list=Ranking.objects.all().order_by("-timestarted").order_by("-currentquestion")
+    queryset_list=Ranking.objects.all().order_by("-currentquestion")
     query = request.GET.get("q")
     if query:
     	queryset_list=queryset_list.filter(Q(username__icontains=query)).distinct()
