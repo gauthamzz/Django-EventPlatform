@@ -1,16 +1,42 @@
-Python-Django based online event platform.
-
-This was used as backend for [stegolica](http://stegolica.effe.org.in) 2016 part of [effervescence](http://eff.org.in)
-
-You can reuse this code for any online event. Change the front end at wsgi/stegolica/templates/
-
+Python-Django based online event platform named stegolica
 Hosting can be done at openshift and webapp is optimised for that.
 
-use these commands to run 
------------------------
-1. cd wsgi/stegolica
-2. python manage.py runserver port(8000 is the default)
+New to this
+----------  
+go to wsgi and create a virtualenv
 
-About stegolica
----------------
-Stegolica was an online stegnography competition. You can find all quesitons and answers at [my blog post](https://gauthamzz.github.io/2016/10/18/stegolica/)
+`cd wsgi`
+`virtualenv venv`
+`source venv/bin/activate`
+
+create a database
+
+`createdb stegolica`
+
+enable settings, fill in your username and password in settings.py
+
+`cd stegolica`
+`cp dev-settings.py settings.py`
+
+Run it
+
+`python manage.py runserver`
+
+go to `127.0.0.1:8000` to view
+
+
+for deployment use dev.py.
+
+Wanna help
+---------
+you can help by
+1. finding out issues
+2. fixing issues already in the issues section
+
+Template design
+--------------
+
+![alt text](http://i.imgsafe.org/87195dec93.png)
+![alt text](http://i.imgsafe.org/871922cf5d.png)
+![alt text](http://i.imgsafe.org/87192a34df.png)
+![alt text](http://i.imgsafe.org/879d151076.png)
