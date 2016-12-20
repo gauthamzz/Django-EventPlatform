@@ -1,5 +1,6 @@
 Python-Django based online event platform named stegolica
-Hosting can be done at openshift and webapp is optimised for that.
+
+> Hosting can be done at openshift and webapp is optimised for that.
 
 New to this
 ----------  
@@ -25,11 +26,12 @@ Run it
 go to `127.0.0.1:8000` to view
 
 
-for deployment use dev.py.
+> for deployment i openshift use dev.py.
 
 Wanna help
 ---------
 you can help by
+
 1. finding out issues
 2. fixing issues already in the issues section
 
