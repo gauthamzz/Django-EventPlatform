@@ -2,6 +2,17 @@ Python-Django based online event platform named stegolica
 
 > Hosting can be done at openshift and webapp is optimised for that.
 
+# Features
+
+1. Question page with hint
+2. Ranking page
+3. Login and register page
+
+Frontend
+--------
+Uses [materializecss](http://materializecss.com/) and particle.js 
+
+
 New to this
 ----------  
 go to wsgi and create a virtualenv
@@ -37,8 +48,14 @@ you can help by
 
 Template design
 --------------
+## main page
 
 ![alt text](http://i.imgsafe.org/87195dec93.png)
+
+## login page
+
 ![alt text](http://i.imgsafe.org/871922cf5d.png)
-![alt text](http://i.imgsafe.org/87192a34df.png)
+
+## Question page with hint
+
 ![alt text](http://i.imgsafe.org/879d151076.png)
