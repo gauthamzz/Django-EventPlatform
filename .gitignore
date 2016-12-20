@@ -2,3 +2,4 @@
 *.py~
 *.sqlite*
 wsgi/venv
+wsgi/stegolica/stegolica/settings.py

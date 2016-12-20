@@ -55,13 +55,10 @@ def question(request,id=None):
         instance2=Ranking.objects.create(username=request.user.username,currentquestion=1)
     if instance2.currentquestion!=id :
         return HttpResponseRedirect("/website/%s" %instance2.currentquestion)
-    # check if user already ansered
-    # time=instance2.timestarted
-    # currenttime=datetime.datetime.now()
-    # diff=currenttime-time
     instancetext=instance.questiontext
     imagelink=instance.imagelink
     answer=instance.answertext
+    hint1=instance.hint1
     # check if answer is correct
     if form.is_valid():
         instance1=form.save(commit=False)
@@ -76,7 +73,8 @@ def question(request,id=None):
     context={
     "instance":instancetext,
     "form":form,
-    "imagelink":imagelink
+    "imagelink":imagelink,
+    "hint1":hint1
     # "differenceintime":diff
     }
     return render(request,"question.html",context)
