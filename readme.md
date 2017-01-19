@@ -29,7 +29,7 @@ go to wsgi and create a virtualenv
 
 create a database
 
-- `createdb stegolica`
+- `sudo -u postgres createdb -O gautham stegolica`
 
 enable settings, fill in your username and password (of postgres) in settings.py
 
