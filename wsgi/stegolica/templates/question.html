@@ -6,7 +6,7 @@
 
 <nav class='blue'>
   <div class="nav-wrapper">
-    <a href="/" class="brand-logo left">  EVENT</a>
+    <a href="/" class="brand-logo center">  EVENT</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
 
     </ul>
@@ -26,7 +26,7 @@
 <div class ="col-sm-8 col-sm-offset-0">
 <div class="card-panel hoverable grey lighten-4 ">
 <h5>{{instance}}</h5>
-<img src="{{imagelink|safe}}">
+{{imagelink|safe}}
 
 <form method='POST' action=''>{% csrf_token %}
 {{ form.as_p }}
