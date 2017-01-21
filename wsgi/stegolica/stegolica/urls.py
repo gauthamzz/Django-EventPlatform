@@ -14,16 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 # """
 
-from django.conf.urls import url,include
+from django.conf.urls import url, include
 from django.shortcuts import redirect
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+import registration
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^website/',include("website.url",namespace="website")),
+    url(r'^website/', include("website.url", namespace="website")),
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url('^$', lambda x: redirect('/website/'))
 ]
-if settings.DEBUG==True:
-    urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+if settings.DEBUG == True:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -80,8 +80,8 @@ WSGI_APPLICATION = 'stegolica.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'USER': '',
-        'PASSWORD': '',
+        'USER': 'projectuser',
+        'PASSWORD': 'root',
         'NAME': 'stegolica',
         'HOST': 'localhost',
         'PORT': '5432',
