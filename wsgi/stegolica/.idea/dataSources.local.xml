@@ -7,5 +7,11 @@
       <schema-pattern>stegolica.pg_catalog stegolica.public</schema-pattern>
       <default-schemas>stegolica.public</default-schemas>
     </data-source>
+    <data-source name="Django default" uuid="627c4e3b-2c3e-47d4-a252-b83dd8dff582">
+      <user-name>projectuser</user-name>
+      <user-password>dfd8dfc5dfc5dfde</user-password>
+      <schema-pattern>stegolica.pg_catalog stegolica.public</schema-pattern>
+      <default-schemas>stegolica.public</default-schemas>
+    </data-source>
   </component>
 </project>

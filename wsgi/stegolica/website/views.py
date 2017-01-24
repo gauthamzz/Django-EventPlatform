@@ -31,7 +31,7 @@ def rank(request):
     query = request.GET.get("q")
     if query:
         queryset_list = queryset_list.filter(Q(username__icontains=query)).distinct()
-    paginator = Paginator(queryset_list, 15)  # Show 25 contacts per page
+    paginator = Paginator(queryset_list, 15)  # Show 15 contacts per page
     page = request.GET.get('page')
     try:
         queryset = paginator.page(page)
