@@ -35,6 +35,8 @@ enable settings, fill in your username and password (of postgres) in settings.py
 
 - `cd stegolica`
 - `cp dev-settings.py settings.py`
+-  pip install -r requirements.txt
+
 
 Do migrations (bare with me)
 
