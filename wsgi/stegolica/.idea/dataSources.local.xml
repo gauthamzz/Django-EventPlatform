@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - stegolica@localhost" uuid="00875d48-77c3-4974-b8ae-9bd3a2d72e5d">
+      <secret-storage>master_key</secret-storage>
+      <user-name>projectuser</user-name>
+      <schema-pattern>stegolica.pg_catalog stegolica.public</schema-pattern>
+      <default-schemas>stegolica.public</default-schemas>
+    </data-source>
+    <data-source name="Django default" uuid="627c4e3b-2c3e-47d4-a252-b83dd8dff582">
+      <user-name>projectuser</user-name>
+      <user-password>dfd8dfc5dfc5dfde</user-password>
+      <schema-pattern>stegolica.pg_catalog stegolica.public</schema-pattern>
+      <default-schemas>stegolica.public</default-schemas>
+    </data-source>
+  </component>
+</project>
