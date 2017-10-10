@@ -58,20 +58,6 @@ you can help by
 1. finding out issues
 2. fixing issues already in the issues section
 
-Template design
---------------
-## main page
-
-![alt text](http://i.imgsafe.org/87195dec93.png)
-
-## login page
-
-![alt text](http://i.imgsafe.org/871922cf5d.png)
-
-## Question page with hint
-
-![alt text](http://i.imgsafe.org/879d151076.png)
-
 Frontend
 --------
 Uses [materializecss](http://materializecss.com/) and particle.js 
